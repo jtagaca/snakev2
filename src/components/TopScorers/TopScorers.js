@@ -4,29 +4,24 @@ import loadingImage from "../../assets/img/loading.svg";
 import axios from "axios";
 import Modal from "../Modal/Modal";
 
-/*
-    <TopScorers 
-        onBack={onBack}
-        onClose={onClose}
-        userName={props.settings.userName} />
-*/
 export default function TopScorers(props) {
   const [topScorers, setTopScorers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    axios
-      .get("/.netlify/functions/get-top-scorers")
-      .then((response) => {
-        setTopScorers(response.data.data);
-      })
-      .catch((err) => {
-        console.error(err);
-      })
-      .then(function () {
-        setLoading(false);
-      });
-  }, []);
+  // database information getter
+  // useEffect(() => {
+  //   axios
+  //     .get("/.netlify/functions/get-top-scorers")
+  //     .then((response) => {
+  //       setTopScorers(response.data.data);
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     })
+  //     .then(function () {
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   return (
     <Modal
@@ -47,7 +42,7 @@ export default function TopScorers(props) {
         </div>
       }
     >
-      <div className="top-scorers">
+      {/* <div className="top-scorers">
         {loading ? (
           <img src={loadingImage} alt="loading..." />
         ) : topScorers && topScorers.length > 0 ? (
@@ -85,7 +80,7 @@ export default function TopScorers(props) {
         ) : (
           <span>Nothing found here, try again later</span>
         )}
-      </div>
+      </div> */}
     </Modal>
   );
 }

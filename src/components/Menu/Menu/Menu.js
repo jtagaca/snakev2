@@ -34,7 +34,13 @@ export default function (props) {
         />
       );
     } else if (selectedOption === menuOptions.topScorers) {
-      return <TopScorers onBack={onBack} onClose={onClose} userName={props.settings.userName} />;
+      return (
+        <TopScorers
+          onBack={onBack}
+          onClose={onClose}
+          userName={props.settings.userName}
+        />
+      );
     } else if (selectedOption === menuOptions.about) {
       return <About onBack={onBack} onClose={onClose} />;
     } else {

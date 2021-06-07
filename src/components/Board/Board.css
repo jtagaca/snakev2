@@ -1,7 +1,7 @@
 table.board {
   height: calc(100% - 50px); /* 50px goes to header */
   width: calc(100% + 1px);
-  background: #f5f2f1;
+  background: #add8e6;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +9,7 @@ table.board {
   border-collapse: collapse;
 }
 .board td {
-  border: 1px solid #e9ece8;
+  border: 1px solid black;
 }
 .board.borderless td {
   border: none;

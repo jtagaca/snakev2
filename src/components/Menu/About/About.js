@@ -40,42 +40,6 @@ export default function About(props) {
         It is good idea to be careful when doing so.
         <br />
         <br />
-        <h3>Authors</h3>
-        <p>
-          <a
-            href="https://www.linkedin.com/in/elnoor/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Elnur Mammadli
-          </a>
-          &nbsp;Software Developer
-        </p>
-        <p>
-          <a
-            href="https://www.behance.net/ziyas/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ziya Suleymanzadeh
-          </a>
-          &nbsp;Graphic Designer
-        </p>
-        <br />
-        <h3 className="margin-top-0">Technical</h3>
-        <p>
-          This project has been built using JavaScript and React as well as
-          HTML, CSS. Some AWS Lambda and FaunaDB has been used to store Top
-          Scorers. This project is open source at&nbsp;
-          <a
-            href="https://github.com/elnoor/snake"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          .
-        </p>
       </div>
     </Modal>
   );

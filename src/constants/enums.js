@@ -1,7 +1,5 @@
 export const menuOptions = {
   settings: "Settings",
-  topScorers: "Top scorers",
-  about: "About"
 };
 
 // order matters

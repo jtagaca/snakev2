@@ -8,12 +8,12 @@
 }
 .header {
   display: flex;
-  padding: 0px 12px;
+  padding: 10px 12px;
   height: 50px;
   max-height: 50px;
-  background: white;
-  color: #bebebe;
-  font-size: 14px;
+  background: black;
+  color: deeppink;
+  font-size: 25px;
 }
 .header > div {
   margin-top: 15px;

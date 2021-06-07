@@ -4,7 +4,7 @@ export const menuOptions = {
 
 // order matters
 export const themes = {
-  candySnake: { key: "candySnake", value: "Candy Snake" },
-  colorSnake: { key: "colorSnake", value: "Color Snake" },
+  candySnake: { key: "candySnake", value: "Snake V2" },
+  colorSnake: { key: "colorSnake", value: "Snake V2" },
   deSnaker: { key: "deSnaker", value: "DeSnaker" },
 };

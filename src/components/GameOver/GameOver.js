@@ -8,7 +8,7 @@ import TopScorers from "../TopScorers/TopScorers";
 export default function GameOver(props) {
   const record = useRef(store.get("record") || 0); // get user's best score stored in browser memory
   const [hasNewRecord, setHasNewRecord] = useState(false);
-  const [showTopScorers, setShowTopScorers] = useState(false);
+  // const [showTopScorers, setShowTopScorers] = useState(false);
 
   useEffect(() => {
     if (props.score > record.current) {
@@ -19,7 +19,7 @@ export default function GameOver(props) {
         axios
           .post("/.netlify/functions/create-top-scorer", {
             name: props.userName,
-            score: props.score
+            score: props.score,
           })
           .then((response) => {
             // console.log(response);
@@ -45,14 +45,14 @@ export default function GameOver(props) {
   }, [props]);
 
   function render() {
-    if (showTopScorers) {
-      return (
-        <TopScorers
-          onBack={() => setShowTopScorers(false)}
-          userName={props.userName}
-        />
-      );
-    }
+    // if (showTopScorers) {
+    //   return (
+    //     <TopScorers
+    //       onBack={() => setShowTopScorers(false)}
+    //       userName={props.userName}
+    //     />
+    //   );
+    // }
     return (
       <Modal
         open={true}
@@ -68,7 +68,7 @@ export default function GameOver(props) {
               <p>Congratulations!</p> New record!
             </h4>
           )}
-          {
+          {/* {
             record.current && parseInt(record.current) > 0 ? (
               <h5 className="d-flex">
                 <span className="w-100 float-left">
@@ -83,7 +83,7 @@ export default function GameOver(props) {
                 </span>
               </h5>
             ) : null // on purpose
-          }
+          } */}
         </div>
       </Modal>
     );

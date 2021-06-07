@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "ITC Avant Garde Std Md";
+  src: url("./assets/fonts/ITCAvantGardeStd-Bold.eot");
+  src: local("ITC Avant Garde Gothic Std Bold"), local("ITCAvantGardeStd-Bold"),
+    url("./assets/fonts/ITCAvantGardeStd-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/ITCAvantGardeStd-Bold.woff2") format("woff2"),
+    url("./assets/fonts/ITCAvantGardeStd-Bold.woff") format("woff"),
+    url("./assets/fonts/ITCAvantGardeStd-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #8fcdd6;
+  font-family: "ITC Avant Garde Std Md", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+select {
+  border: 2px solid #bdbebd;
+  border-radius: 3px;
+  color: #bdbebd;
+  font-size: 1rem;
+  font-weight: bold;
+  outline: none !important;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type="text"] {
+  border: 2px solid #bdbebd;
+  border-radius: 3px;
+  color: #bdbebd;
+  font-weight: bold;
+  outline: none !important;
+  padding: 2px 10px;
+}
+
+a {
+  color: #63bb57;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CHECKBOX START */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 2px solid #bdbebd;
+  border-radius: 3px;
+}
+.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.checkbox input:checked ~ .checkmark {
+  background-color: #bdbebd;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkbox .checkmark:after {
+  left: 7px;
+  top: 1px;
+  width: 5px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* CHECKBOX END */
+
+/* UTILITIES START */
+.d-flex {
+  display: flex;
+}
+.d-block {
+  display: flex;
+}
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.margin-0 {
+  margin: 0;
+}
+.margin-top-0 {
+  margin-top: 0;
+}
+.padding-0 {
+  padding: 0;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.shine {
+  background-image: linear-gradient(
+    to right,
+    transparent 33%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 66%
+  );
+  background-size: 1000% 1%;
+  animation: shine 2s infinite;
+}
+
+/* UTILITIES START */
+
+@keyframes shine {
+  0% {
+    background-position: right;
+  }
+}

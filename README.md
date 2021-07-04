@@ -22,7 +22,3 @@ This was a personal project built with React.JS and hosted on Github Pages.This 
    />
 
 
-<img 
-      src="/public/4nk.png" 
-      height=200px 
-   />
